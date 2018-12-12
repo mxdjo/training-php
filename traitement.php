@@ -12,6 +12,7 @@ switch ($_GET['action']) {
     case 'edit':
         $sqlSelectData = $bdd->query('SELECT * FROM jeux_video WHERE ID =' . $_GET['id'])->fetchAll(PDO::FETCH_ASSOC);
         include 'update_form.php';
+        include ' modification.php';
         break;
     case 'del':
     die('Super del');
